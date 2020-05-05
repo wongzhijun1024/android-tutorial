@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试文本"
+                android:textColor="#4455ff"
+                android:id="@+id/textView"
+                android:textSize="40sp"/>
+            <TextView
+                android:layout_below="@id/textView"
+                android:id="@+id/xnsy"
+                android:layout_width="474px"
+                android:layout_height="150px"
+                android:text="去看看"
+                android:gravity="center"
+                android:textColor="#fdfff9"
+                android:textSize="30sp"
+                android:background="@drawable/button2"/>
+
+        </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

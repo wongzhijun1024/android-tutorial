@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditTextActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/loading_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00c4ff"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/activity_register_button_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/arrow_left" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:layout_centerInParent="true"
+                android:text="输入账号" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/loading_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e6e6e6"
+            >
+
+            <TextView
+                android:id="@+id/text_infor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="17sp"
+                android:text="账号："/>
+
+            <EditText
+                android:id="@+id/activity_register_edit_account"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/text_infor"
+                android:hint="QQ号/邮箱地址/手机号"
+                android:textColorHint="#757575"
+                android:background="#ffffff"
+                android:padding="20dp"
+                />
+
+            <TextView
+                android:id="@+id/activity_register_button_ok"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_ok"
+                android:layout_below="@id/activity_register_edit_account"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/activity_register_button_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="海外手机号"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"
+                android:layout_alignLeft="@id/activity_register_button_ok"
+                android:layout_below="@id/activity_register_button_ok"
+                android:textColor="#0079ff"
+                />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

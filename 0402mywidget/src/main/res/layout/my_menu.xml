@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/my_menu_layout_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/my_menu_icon_book"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/book1" />
+
+            <TextView
+                android:id="@+id/my_menu_text_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_menu_icon_book"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="单词"
+                android:textColor="@color/selectMenu" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_menu_layout_training"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/my_menu_icon_training"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/training2" />
+
+            <TextView
+                android:id="@+id/my_menu_text_training"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_menu_icon_training"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="训练"
+                android:textColor="@color/oNselectMenu" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_menu_layout_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/my_menu_icon_search"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/search2" />
+
+            <TextView
+                android:id="@+id/my_menu_text_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_menu_icon_search"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="发现"
+                android:textColor="@color/oNselectMenu" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_menu_layout_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/my_menu_icon_shop"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/shop2" />
+
+            <TextView
+                android:id="@+id/my_menu_text_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_menu_icon_shop"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="商城"
+                android:textColor="@color/oNselectMenu" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_menu_layout_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/my_menu_icon_mine"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/mine2" />
+
+            <TextView
+                android:id="@+id/my_menu_text_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_menu_icon_mine"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="我的"
+                android:textColor="@color/oNselectMenu" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

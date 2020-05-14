@@ -21,13 +21,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //我的
     final int STATE_MINE=STATE_SHOP+1;
 
+    //单词相关组件
     RelativeLayout bookLayout;
     TextView bookIcon;
     TextView bookFont;
 
+    //训练相关组件
     RelativeLayout trainingLayout;
     TextView trainingIcon;
     TextView trainingFont;
+
+    //查找相关组件
+    RelativeLayout searchLayout;
+    TextView searchIcon;
+    TextView searchFont;
+
+    //商城组件
+    RelativeLayout shopLayout;
+    TextView shopIcon;
+    TextView shopFont;
+
+    //我的组件
+    RelativeLayout mineLayout;
+    TextView mineIcon;
+    TextView mineFont;
+
+
 
     //创建一个缓冲的容器
     int index=1;
@@ -46,6 +65,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void getWidget() {
         getBookWidget();
         getTrainingWidget();
+        getSearchWidget();
+        getShopWidget();
+        getMineWidget();
+    }
+
+    private void getMineWidget() {
+        mineLayout=this.findViewById(R.id.mineLayout);
+        mineIcon=this.findViewById(R.id.mineIcon);
+        mineFont=this.findViewById(R.id.mineFont);
+
+        //设置监听
+        mineLayout.setOnClickListener(this);
+    }
+
+    /**
+     * 获得商城组件
+     */
+    private void getShopWidget() {
+        shopLayout=this.findViewById(R.id.shopLayout);
+        shopIcon=this.findViewById(R.id.shopIcon);
+        shopFont=this.findViewById(R.id.shopFont);
+        //设置监听
+        shopLayout.setOnClickListener(this);
+    }
+
+    /*
+     * 查找组件
+     */
+    private void getSearchWidget() {
+        searchLayout=this.findViewById(R.id.searchLayout);
+        searchIcon=this.findViewById(R.id.searchIcon);
+        searchFont=this.findViewById(R.id.searchFont);
+
+        //设置监听
+        searchLayout.setOnClickListener(this);
     }
 
     /**
@@ -89,9 +143,54 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.trainingLayout:
                 trainingAction();
                 break;
+            case R.id.searchLayout:
+                searchAction();
+                break;
+            case R.id.shopLayout:
+                shopAction();
+                break;
+            case R.id.mineLayout:
+                mineAction();
+                break;
         }
 
     }
+
+    @SuppressLint("ResourceAsColor")
+    private void bookAction() {
+        bookIcon.setBackgroundResource(R.drawable.book1);
+        bookFont.setTextColor(R.color.fontSelect);
+        index=STATE_BOOK;
+    }
+
+    @SuppressLint("ResourceAsColor")
+    private void trainingAction() {
+        trainingIcon.setBackgroundResource(R.drawable.training);
+        trainingFont.setTextColor(R.color.fontSelect);
+        index=STATE_TRAINING;
+    }
+    @SuppressLint("ResourceAsColor")
+    private void searchAction() {
+        searchIcon.setBackgroundResource(R.drawable.search1);
+        searchFont.setTextColor(R.color.fontSelect);
+        index=STATE_SEARCH;
+    }
+
+    @SuppressLint("ResourceAsColor")
+    private void shopAction() {
+        shopIcon.setBackgroundResource(R.drawable.shop1);
+        shopFont.setTextColor(R.color.fontSelect);
+        index=STATE_SHOP;
+    }
+
+    @SuppressLint("ResourceAsColor")
+    private void mineAction() {
+        mineIcon.setBackgroundResource(R.drawable.mine1);
+        mineFont.setTextColor(R.color.fontSelect);
+        index=STATE_MINE;
+    }
+
+
 
     @SuppressLint("ResourceAsColor")
     private void reset(){
@@ -104,19 +203,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
              trainingIcon.setBackgroundResource(R.drawable.training2);
              trainingFont.setTextColor(R.color.fontNoSelect);
              break;
+         case STATE_SEARCH:
+             searchIcon.setBackgroundResource(R.drawable.search2);
+             searchFont.setTextColor(R.color.fontNoSelect);
+             break;
+         case STATE_SHOP:
+             shopIcon.setBackgroundResource(R.drawable.shop2);
+             shopFont.setTextColor(R.color.fontNoSelect);
+             break;
+         case STATE_MINE:
+             mineIcon.setBackgroundResource(R.drawable.mine2);
+             mineFont.setTextColor(R.color.fontNoSelect);
+             break;
      }
     }
-    @SuppressLint("ResourceAsColor")
-    private void trainingAction() {
-        trainingIcon.setBackgroundResource(R.drawable.training);
-        trainingFont.setTextColor(R.color.fontSelect);
-        index=STATE_TRAINING;
-    }
 
-    @SuppressLint("ResourceAsColor")
-    private void bookAction() {
-        bookIcon.setBackgroundResource(R.drawable.book1);
-        bookFont.setTextColor(R.color.fontSelect);
-        index=STATE_BOOK;
-    }
 }

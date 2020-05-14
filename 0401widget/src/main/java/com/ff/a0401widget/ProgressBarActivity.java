@@ -9,9 +9,6 @@ import androidx.annotation.Nullable;
 
 public class ProgressBarActivity extends Activity {
 
-    private AnimationDrawable ad;
-
-    ImageView img_pgbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

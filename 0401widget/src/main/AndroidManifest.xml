@@ -14,13 +14,12 @@
         <activity android:name=".ImageViewActivity">
         </activity>
         <activity android:name=".ProgressBarActivity">
-        </activity>
-        <activity android:name=".LoadingActivity1">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".LoadingActivity1">
         </activity>
         <activity android:name=".LoadingActivity2">
 

@@ -17,7 +17,12 @@
             <option value="$PROJECT_DIR$/0204linearlayout" />
             <option value="$PROJECT_DIR$/0204relativelayout" />
             <option value="$PROJECT_DIR$/0205demo" />
-            <option value="$PROJECT_DIR$/0301activity" />
+            <option value="$PROJECT_DIR$/0301activity生命周期" />
+            <option value="$PROJECT_DIR$/0302activity页面跳转" />
+            <option value="$PROJECT_DIR$/0304activity" />
+            <option value="$PROJECT_DIR$/0305activity" />
+            <option value="$PROJECT_DIR$/0401widget" />
+            <option value="$PROJECT_DIR$/0402mywidget" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

@@ -2,6 +2,7 @@ package com.ff.a0403listview;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
@@ -17,7 +18,7 @@ public class MainActivity2 extends Activity {
 
     ListView listView;
 
-    int icons[] = {R.drawable.icon_1, R.drawable.icon_2, R.drawable.icon_3, R.drawable.icon_4, R.drawable.icon_5, R.drawable.icon_6, R.drawable.icon_7};
+    int icons[] = {R.drawable.icon_1, R.drawable.icon_2, R.drawable.icon_3, R.drawable.icon_4, R.drawable.icon_5, R.drawable.icon_6, R.drawable.icon_7, R.drawable.icon_4, R.drawable.icon_5, R.drawable.icon_6, R.drawable.icon_7};
     private ArrayList<User> list = new ArrayList<>();
 
     @Override
@@ -35,6 +36,9 @@ public class MainActivity2 extends Activity {
 
         listView.setAdapter(userAdapter);
 
+        HeadView headView= new HeadView(this);
+        //在listView上面添加一个自定义组件
+        listView.addHeaderView(headView);
 
 
     }

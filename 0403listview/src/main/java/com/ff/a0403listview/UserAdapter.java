@@ -52,9 +52,10 @@ public class UserAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-
-        View view= mInflater.inflate(R.layout.user_view,null);
+    public View getView(int position, View view, ViewGroup parent) {
+        //如果当前显示的view为空，那么就创建view,可以让当前的view进行复用
+        if(view==null)
+         view= mInflater.inflate(R.layout.user_view,null);
 
         TextView icon = view.findViewById(R.id.img);
         icon.setBackgroundResource(lists.get(position).getImg());
@@ -67,6 +68,7 @@ public class UserAdapter extends BaseAdapter {
 
         TextView time = view.findViewById(R.id.text_view_time);
         time.setText(lists.get(position).getTime());
+
         return view;
     }
 }

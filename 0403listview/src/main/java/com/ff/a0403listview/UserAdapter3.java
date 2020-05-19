@@ -71,6 +71,7 @@ public class UserAdapter3 extends BaseAdapter {
             //把viewHolder存放到view里面去
             view.setTag(viewHolder);
         }else{
+            //从现实view里面取出具体显示的子项
             viewHolder=(ViewHolder)view.getTag();
         }
         viewHolder.userView.setData(lists.get(position));

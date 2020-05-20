@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/my_menu_layout_wx"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp">
+
+            <TextView
+                android:id="@+id/my_menu_icon_wx"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/wx01" />
+
+            <TextView
+                android:id="@+id/my_menu_text_wx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_menu_icon_wx"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:text="微信"
+                android:textColor="@color/menuSlect" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_menu_layout_contact"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp">
+
+            <TextView
+                android:id="@+id/my_menu_icon_contact"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/contact02" />
+
+            <TextView
+                android:id="@+id/my_menu_text_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_menu_icon_contact"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="通讯录"
+                android:textSize="12sp"
+                android:textColor="@color/menuNoSlect" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_menu_layout_find"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp">
+
+            <TextView
+                android:id="@+id/my_menu_icon_find"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/find02" />
+
+            <TextView
+                android:id="@+id/my_menu_text_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_menu_icon_find"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:text="发现"
+                android:textColor="@color/menuNoSlect" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_menu_layout_mine"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp">
+
+            <TextView
+                android:id="@+id/my_menu_icon_mine"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/mine02" />
+
+            <TextView
+                android:id="@+id/my_menu_text_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_menu_icon_mine"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:text="我"
+                android:textColor="@color/menuNoSlect" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

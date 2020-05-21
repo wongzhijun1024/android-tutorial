@@ -13,27 +13,45 @@
         >
         
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="50dp">
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#eaeaea"
+            >
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="微信"
+                android:textColor="#181818"
+                android:textSize="18sp"
                 android:layout_centerInParent="true"
                 />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/add"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                />
         </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_box"
+            android:layout_below="@id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
 
         <com.ff.a0404demo.widget.MyMenu
             android:id="@+id/myMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:layout_below="@id/layout_box"
             />
 
 

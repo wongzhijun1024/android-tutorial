@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 
 import com.ff.a0404demo.widget.MyMenu;
 import com.ff.a0404demo.widget.OnMenuClickListener;
+import com.ff.a0404demo.wx.WxView;
 
 public class MainActivity extends Activity implements OnMenuClickListener {
 
@@ -77,6 +78,10 @@ public class MainActivity extends Activity implements OnMenuClickListener {
         //获得布局的属性
         RelativeLayout.LayoutParams params= (RelativeLayout.LayoutParams) layoutBox.getLayoutParams();
         params.height=height/10*8;
+
+        WxView wxView = new WxView(this);
+
+        layoutBox.addView(wxView);
 
     }
     private void getWidgetMenu() {

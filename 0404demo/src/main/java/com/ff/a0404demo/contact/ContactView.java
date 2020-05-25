@@ -73,6 +73,7 @@ public class ContactView extends RelativeLayout {
         contactViewAdapter = new ContactViewAdapter(context,list);
     }
 
+    //获得组件
     private void getWidget() {
         getEditView();
         getListView();

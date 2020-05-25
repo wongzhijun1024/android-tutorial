@@ -9,13 +9,24 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:background="#999fff"
+        tools:ignore="MissingConstraints">
+        
+        
+        <EditText
+            android:id="@+id/contact_view_edit_view"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
 
         <ListView
-            android:id="@+id/wx_view_list_view"
+            android:id="@+id/contact_view_list_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff" />
+            android:layout_below="@id/contact_view_edit_view"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            />
+
     </RelativeLayout>
 
 

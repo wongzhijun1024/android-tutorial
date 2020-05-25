@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.ff.a0404demo.contact.ContactView;
 import com.ff.a0404demo.widget.MyMenu;
 import com.ff.a0404demo.widget.OnMenuClickListener;
 import com.ff.a0404demo.wx.WxView;
@@ -32,7 +33,7 @@ public class MainActivity extends Activity implements OnMenuClickListener {
     /**
      * 屏幕宽度
      */
-    private  int width;
+    private int width;
 
     /**
      * 屏幕高度
@@ -68,31 +69,57 @@ public class MainActivity extends Activity implements OnMenuClickListener {
     private void getWidgeTitle() {
         layoutTitle = this.findViewById(R.id.layout_title);
 
-        RelativeLayout.LayoutParams params= (RelativeLayout.LayoutParams) layoutTitle.getLayoutParams();
-        params.height=height/10;
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) layoutTitle.getLayoutParams();
+        params.height = height / 10;
     }
+    WxView wxView;
 
+    ContactView contactView;
     private void getWidgetBox() {
         //获得显示容器：用来装中间切换的内容
-        layoutBox =this.findViewById(R.id.layout_box);
+        layoutBox = this.findViewById(R.id.layout_box);
         //获得布局的属性
-        RelativeLayout.LayoutParams params= (RelativeLayout.LayoutParams) layoutBox.getLayoutParams();
-        params.height=height/10*8;
-
-        WxView wxView = new WxView(this);
-
-        layoutBox.addView(wxView);
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) layoutBox.getLayoutParams();
+        params.height = height / 10 * 8;
 
     }
+
     private void getWidgetMenu() {
         myMenu = this.findViewById(R.id.myMenu);
         myMenu.setOnMenuClickListener(this);
-        RelativeLayout.LayoutParams params= (RelativeLayout.LayoutParams) myMenu.getLayoutParams();
-        params.height=height/10;
+        changeContext(myMenu.state);
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) myMenu.getLayoutParams();
+        params.height = height / 10;
     }
 
     @Override
     public void onClick(View view, int state) {
 
+        changeContext(state);
+
+    }
+
+    private void changeContext(int state){
+        //清除容器里面的所有内容
+        layoutBox.removeAllViews();
+        switch (state) {
+            case MyMenu.STATE_WX:
+                if(wxView==null){
+                    wxView = new WxView(this);
+                }
+                layoutBox.addView(wxView);
+                break;
+            case MyMenu.STATE_CONTACT:
+                if(contactView==null)
+                {
+                    contactView = new ContactView(this);
+                }
+                layoutBox.addView(contactView);
+                break;
+            case MyMenu.STATE_FIND:
+                break;
+            case MyMenu.STATE_MINE:
+                break;
+        }
     }
 }

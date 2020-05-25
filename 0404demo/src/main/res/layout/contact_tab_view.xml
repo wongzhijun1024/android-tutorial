@@ -13,38 +13,19 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/user_view_icon"
+            android:id="@+id/contact_tab_view_icon"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:layout_centerVertical="true" />
 
         <TextView
-            android:id="@+id/user_view_name"
+            android:id="@+id/contact_tab_view_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/user_view_icon"
-            android:layout_alignTop="@id/user_view_icon"
-            android:textColor="#1a1a1a"
-            android:textSize="18sp"
+            android:layout_toRightOf="@id/contact_tab_view_icon"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10dp" />
-
-        <TextView
-            android:id="@+id/user_view_infor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#b6b6b6"
-            android:layout_alignLeft="@id/user_view_name"
-            android:layout_alignBottom="@id/user_view_icon"
-            />
-
-        <TextView
-            android:id="@+id/user_view_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/user_view_name"
-            android:layout_alignParentRight="true"
-            />
 
     </RelativeLayout>
 

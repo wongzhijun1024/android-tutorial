@@ -15,21 +15,21 @@ public class MyMenu extends RelativeLayout implements View.OnClickListener {
     /**
      * 微信
      */
-    final int STATE_WX = 0;
+    public static final int STATE_WX = 0;
     /**
      * 通讯录
      */
-    final int STATE_CONTACT = STATE_WX + 1;
+    public static final int STATE_CONTACT = STATE_WX + 1;
     /**
      * 发现
      */
-    final int STATE_FIND = STATE_CONTACT + 1;
+    public static final int STATE_FIND = STATE_CONTACT + 1;
     /**
      * 我的
      */
-    final int STATE_MINE = STATE_FIND + 1;
+    public static final int STATE_MINE = STATE_FIND + 1;
 
-    int state = STATE_WX;
+    public int state = STATE_CONTACT;
 
     /**
      * 微信
@@ -92,6 +92,7 @@ public class MyMenu extends RelativeLayout implements View.OnClickListener {
         getLayoutContact();
         getLayoutFind();
         getLayoutMine();
+        setSelectView();
     }
 
     private void getLayoutWx() {
@@ -144,39 +145,54 @@ public class MyMenu extends RelativeLayout implements View.OnClickListener {
                 actionMine();
                 break;
         }
-        this.onMenuClickListener.onClick(view,state);
+        setSelectView();
+        this.onMenuClickListener.onClick(view, state);
     }
 
     @SuppressLint("ResourceAsColor")
     private void actionMine() {
-        iconMine.setBackgroundResource(R.drawable.mine01);
-        textMine.setTextColor(R.color.menuSlect);
         //更改状态值
         state = STATE_MINE;
     }
 
     @SuppressLint("ResourceAsColor")
     private void actioinFind() {
-        iconFind.setBackgroundResource(R.drawable.find01);
-        textFind.setTextColor(R.color.menuSlect);
         //更改状态值
         state = STATE_FIND;
     }
 
     @SuppressLint("ResourceAsColor")
     private void actionContact() {
-        iconContact.setBackgroundResource(R.drawable.contact01);
-        textContact.setTextColor(R.color.menuSlect);
         //更改状态值
         state = STATE_CONTACT;
     }
 
     @SuppressLint("ResourceAsColor")
     private void actionWx() {
-        iconWx.setBackgroundResource(R.drawable.wx01);
-        textWx.setTextColor(R.color.menuSlect);
         //更改状态值
         state = STATE_WX;
+    }
+    @SuppressLint("ResourceAsColor")
+    private void setSelectView() {
+        switch (state) {
+            case STATE_WX:
+                iconWx.setBackgroundResource(R.drawable.wx01);
+                textWx.setTextColor(R.color.menuSlect);
+                break;
+            case STATE_CONTACT:
+                iconContact.setBackgroundResource(R.drawable.contact01);
+                textContact.setTextColor(R.color.menuSlect);
+                break;
+            case STATE_FIND:
+                iconFind.setBackgroundResource(R.drawable.find01);
+                textFind.setTextColor(R.color.menuSlect);
+                break;
+            case STATE_MINE:
+                iconMine.setBackgroundResource(R.drawable.mine01);
+                textMine.setTextColor(R.color.menuSlect);
+                break;
+
+        }
     }
 
     @SuppressLint("ResourceAsColor")

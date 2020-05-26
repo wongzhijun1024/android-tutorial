@@ -29,7 +29,7 @@ public class MyMenu extends RelativeLayout implements View.OnClickListener {
      */
     public static final int STATE_MINE = STATE_FIND + 1;
 
-    public int state = STATE_CONTACT;
+    public int state = STATE_WX;
 
     /**
      * 微信

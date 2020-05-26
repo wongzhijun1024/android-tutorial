@@ -50,7 +50,7 @@ public class WxView extends RelativeLayout {
         ArrayList<User> list = new ArrayList<User>();
 
         for(int i=0;i<imgs.length;i++){
-               User user = new User(imgs[i],"姓名"+i,"信息"+i,"星期"+i%7);
+               User user = new User(i,imgs[i],"姓名"+i,"信息"+i,"星期"+i%7);
             list.add(user);
         }
 
